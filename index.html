@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+    <link rel="icon" type="image/png" href="favicon.png">
     <meta charset="UTF-8">
     <!-- 适配手机端 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +18,16 @@
             background-color: #f5f7fa;
             color: #333;
             line-height: 1.6;
+        }
+
+	a {
+            color: black;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #3498db;
         }
 
         /* 导航栏 */
@@ -43,22 +54,13 @@
         header {
             text-align: center;
             padding: 60px 20px;
-            background: linear-gradient(135deg, #3498db, #2980b9);
+            background:linear-gradient(135deg, rgba(52,152,219,0.7),rgba(41,128,185,0.7)), url('https://picsum.photos/1000/200') center/cover no-repeat;
             color: white;
-        }
-
-        .avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid white;
-            margin-bottom: 15px;
         }
 
         /* 内容容器 */
         .container {
-            max-width: 900px;
+            max-width: auto;
             margin: 30px auto;
             padding: 0 20px;
         }
@@ -67,6 +69,7 @@
             background: white;
             padding: 25px;
             margin-bottom: 20px;
+	    line-height: 50px;
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
@@ -78,31 +81,12 @@
             padding-left: 10px;
         }
 
-        /* 技能标签 */
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 10px;
-        }
-
         .tag {
             background: #eaf5ff;
             color: #3498db;
-            padding: 6px 12px;
+            padding: 12px 12px;
             border-radius: 20px;
             font-size: 14px;
-        }
-
-        /* 项目列表 */
-        .project {
-            margin-bottom: 15px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .project:last-child {
-            border-bottom: none;
         }
 
         /* 底部 */
@@ -119,19 +103,53 @@
 <body>
     <!-- 导航 -->
     <nav>
+        <a href="#Games">游戏资源</a>
+        <a href="#Tools">工具资源</a>
+        <a href="#Videos">视频资源</a>
         <a href="#Microsoft">微软原版资源</a>
+        <a href="#Softwares">软件资源</a>
+        <a href="#Fonts">字体资源</a>
+	<a href="#HardwareRanking">硬件天梯图</a>
         <a href="#About">关于</a>
+	<a href="https://github.com/RiverOceanChen/ResourceLibrary">项目地址</a>
     </nav>
 
     <!-- 头部 -->
     <header>
-        <img src="https://picsum.photos/200/200" alt="头像" class="avatar">
         <h1>RiverOcean的资源库</h1>
-        <p>个人收藏网站资源</p>
+        <p>个人收藏夹网站</p>
     </header>
 
     <!-- 内容区 -->
     <div class="container">
+        <!-- 游戏资源 -->
+        <div class="card" id="Games">
+            <h2>游戏资源</h2>
+            <span class="tag"><a href="https://baike.mihoyo.com/ys/obc/" target="_blank">观测枢-原神WIKI</a></span>
+            <span class="tag"><a href="https://baike.mihoyo.com/zzz/wiki/" target="_blank">绳匠情报网-绝区零WIKI</a></span>
+            <span class="tag"><a href="https://bbs.mihoyo.com/sr/wiki/" target="_blank">开拓者笔记-崩坏：星穹铁道WIKI</a></span>
+            <span class="tag"><a href="https://prts.wiki/" target="_blank">PRTS-明日方舟WIKI</a></span>
+            <span class="tag"><a href="https://wiki.skland.com/endfield" target="_blank">明日方舟：终末地WIKI</a></span>
+            <span class="tag"><a href="https://gi.yatta.moe/chs" target="_blank">安柏计划-原神WIKI</a></span>
+            <span class="tag"><a href="https://www.gamer520.com/" target="_blank">Gamer520</a></span>
+        </div>
+        <!-- 工具资源 -->
+        <div class="card" id="Tools">
+            <h2>工具资源</h2>
+            <span class="tag"><a href="https://tools.miku.ac/" target="_blank">MikuTools - 一站式在线工具合集</a></span>
+            <span class="tag"><a href="https://yandex.com/" target="_blank">Yandex</a></span>
+        </div>
+        <!-- 视频资源 -->
+        <div class="card" id="Videos">
+            <h2>视频资源</h2>
+            <span class="tag"><a href="https://www.agedm.io/" target="_blank">AGE动漫</a></span>
+            <span class="tag"><a href="https://www.mwcy.net/" target="_blank">喵物次元</a></span>
+            <span class="tag"><a href="https://www.gugu3.com/" target="_blank">咕咕番</a></span>
+            <span class="tag"><a href="https://www.libvio.lat/" target="_blank">LIBVIO</a></span>
+            <span class="tag"><a href="https://rentry.la/agefans" target="_blank">AGE动漫网址发布页</a></span>
+            <span class="tag"><a href="https://mwcylink.github.io/" target="_blank">喵物次元网址发布页</a></span>
+            <span class="tag"><a href="https://libvio.lol/" target="_blank">LIBVIO网址发布页</a></span>
+        </div>
         <!-- 微软原版资源 -->
         <div class="card" id="Microsoft">
             <h2>微软原版资源</h2>
@@ -140,19 +158,28 @@
             <span class="tag"><a href="https://msdn.pe8.com/" target="_blank">MSDN-原版之家</a></span>
             <span class="tag"><a href="https://msdn.sjjzm.com/" target="_blank">MSDN-山己乙子木</a></span>
         </div>
-                <!-- 关于 -->
+        <!-- 软件资源 -->
+        <div class="card" id="Softwares">
+            <h2>软件资源</h2>
+            <span class="tag"><a href="https://soft.macxf.com/" target="_blank">软件先锋</a></span>
+            <span class="tag"><a href="https://www.4fb.cn/" target="_blank">4分贝分享网</a></span>
+        </div>
+        <!-- 字体资源 -->
+        <div class="card" id="Fonts">
+            <h2>字体资源</h2>
+            <span class="tag"><a href="https://ziti.xxriji.cn/" target="_blank">字体日记网 - 免费商用字体大全</a></span>
+        </div>
+        <!-- 硬件天梯图 -->
+        <div class="card" id="HardwareRanking">
+            <h2>硬件天梯图</h2>
+            <span class="tag"><a href="https://www.mydrivers.com/zhuanti/tianti/01/index.html" target="_blank">手机CPU性能天梯图（快科技）</a></span>
+            <span class="tag"><a href="https://www.antutu.com/ranking/rank101.htm" target="_blank">安兔兔排行榜</a></span>
+        </div>
+        <!-- 关于 -->
         <div class="card" id="About">
             <h2>关于</h2>
             <p>你好，这里是RiverOcean个人资源网站，仅收集个人需要的网址资源。</p>
         </div>
-        <style>
-            a {
-                text-decoration: none;
-            }
-            a:hover {
-            text-decoration: underline;
-            }
-</style>
     </div>
 
     <!-- 底部 -->
