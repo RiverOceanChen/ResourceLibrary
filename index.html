@@ -2,175 +2,18 @@
 <html lang="zh-CN">
 <head>
     <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js" defer></script>
     <meta charset="UTF-8">
     <!-- 适配手机端 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RiverOcean的资源库</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Microsoft YaHei", sans-serif;
-        }
-
-        body {
-            background-color: #f5f7fa;
-            color: #333;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-	a {
-            color: black;
-            margin: 0;
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: #3498db;
-        }
-
-	/* 顶部导航 */
-        .top-nav {
-            background: #2c3e50;
-            color: white;
-            padding: 1rem;
-            display: flex;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-	
-		.top-nav h2{
-	    	padding:0 12px;
-		}
-
-        /* 三横线按钮 */
-        .menu-btn {
-            font-size: 24px;
-            background: none;
-            border: none;
-            color: white;
-            cursor: pointer;
-        }
-
-        /* —————— 侧边栏核心样式 —————— */
-        .sidebar {
-            position: fixed;
-            top: 0;
-            left: -260px; /* 默认隐藏在屏幕外 */
-            width: 260px;
-            height: 100%;
-            background: #2c3e50;
-            padding-top: 60px;
-            transition: 0.3s ease; /* 滑动动画 */
-            z-index: 200;
-        }
-
-        /* 弹出时的样式 */
-        .sidebar.active {
-            left: 0;
-        }
-
-        /* 侧边栏链接 */
-        .sidebar a {
-            display: block;
-            color: white;
-            padding: 15px 25px;
-            text-decoration: none;
-            font-size: 16px;
-        }
-
-        .sidebar a:hover {
-            background: #3498db;
-        }
-
-        /* 关闭按钮 */
-        .close-btn {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            font-size: 28px;
-            color: white;
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-
-        /* 遮罩层（点击空白关闭） */
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.4);
-            display: none;
-            z-index: 150;
-        }
-
-        .overlay.active {
-            display: block;
-        }
-
-        /* 头部封面 */
-        header {
-            text-align: center;
-            padding: 60px 20px;
-            background:linear-gradient(135deg, rgba(52,152,219,0.7),rgba(41,128,185,0.7)), url('https://picsum.photos/1000/200') center/cover no-repeat;
-            color: white;
-        }
-
-        /* 内容容器 */
-        .container {
-            max-width: auto;
-            margin: 30px auto;
-            padding: 0 20px;
-        }
-
-        .card {
-            background: white;
-            padding: 25px;
-            margin-bottom: 20px;
-	    	line-height: 50px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .card h2 {
-            color: #2c3e50;
-            margin-bottom: 15px;
-            border-left: 4px solid #3498db;
-            padding-left: 10px;
-        }
-
-        .tag {
-            background: #eaf5ff;
-            color: #3498db;
-            padding: 12px 20px;
-            border-radius: 20px;
-			white-space:nowrap;
-            font-size: 14px;
-        }
-
-        /* 底部 */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #2c3e50;
-            color: white;
-            margin-top: 40px;
-        }
-    </style>
 </head>
 
 <body>
     <!-- —————— 顶部导航 + 三横线按钮 —————— -->
     <div class="top-nav">
         <button class="menu-btn" onclick="openSidebar()">☰</button>
-        <h2>导航栏</h2>
     </div>
 
     <!-- —————— 侧边栏 —————— -->
@@ -181,8 +24,6 @@
         <a href="#Videos" onclick="closeSidebar()">视频资源</a>
         <a href="#Microsoft" onclick="closeSidebar()">微软原版资源</a>
         <a href="#Softwares" onclick="closeSidebar()">软件资源</a>
-        <a href="#Fonts" onclick="closeSidebar()">字体资源</a>
-	<a href="#HardwareRanking" onclick="closeSidebar()">硬件天梯图</a>
         <a href="#About" onclick="closeSidebar()">关于</a>
 	<a href="https://github.com/RiverOceanChen/ResourceLibrary" onclick="closeSidebar()">项目地址</a>
     </div>
@@ -214,6 +55,9 @@
             <h2>工具资源</h2>
             <span class="tag"><a href="https://tools.miku.ac/" target="_blank">MikuTools - 一站式在线工具合集</a></span>
             <span class="tag"><a href="https://yandex.com/" target="_blank">Yandex</a></span>
+            <span class="tag"><a href="https://ziti.xxriji.cn/" target="_blank">字体日记网 - 免费商用字体大全</a></span>
+            <span class="tag"><a href="https://www.mydrivers.com/zhuanti/tianti/01/index.html" target="_blank">手机CPU性能天梯图（快科技）</a></span>
+            <span class="tag"><a href="https://www.antutu.com/ranking/rank101.htm" target="_blank">安兔兔排行榜</a></span>
         </div>
         <!-- 视频资源 -->
         <div class="card" id="Videos">
@@ -237,19 +81,11 @@
         <!-- 软件资源 -->
         <div class="card" id="Softwares">
             <h2>软件资源</h2>
+            <span class="tag"><a href="https://mp.weixin.qq.com/s/KeeURBqcaS-OyTCKBcEXcA" target="_blank">软件管家softgj</a></span>
             <span class="tag"><a href="https://soft.macxf.com/" target="_blank">软件先锋</a></span>
             <span class="tag"><a href="https://www.4fb.cn/" target="_blank">4分贝分享网</a></span>
-        </div>
-        <!-- 字体资源 -->
-        <div class="card" id="Fonts">
-            <h2>字体资源</h2>
-            <span class="tag"><a href="https://ziti.xxriji.cn/" target="_blank">字体日记网 - 免费商用字体大全</a></span>
-        </div>
-        <!-- 硬件天梯图 -->
-        <div class="card" id="HardwareRanking">
-            <h2>硬件天梯图</h2>
-            <span class="tag"><a href="https://www.mydrivers.com/zhuanti/tianti/01/index.html" target="_blank">手机CPU性能天梯图（快科技）</a></span>
-            <span class="tag"><a href="https://www.antutu.com/ranking/rank101.htm" target="_blank">安兔兔排行榜</a></span>
+            <span class="tag"><a href="https://codec.kyiv.ua/releases.htm" target="_blank">Team V.R Releases</a></span>
+            <span class="tag"><a href="https://audioz.download/" target="_blank">AudioWareZ</a></span>
         </div>
         <!-- 关于 -->
         <div class="card" id="About">
@@ -262,20 +98,5 @@
     <footer>
         <p>&copy; 2026 RiverOcean的资源库</p>
     </footer>
-    <!-- —————— 核心 JS：控制侧边栏开关 —————— -->
-    <script>
-        const sidebar = document.getElementById("sidebar");
-        const overlay = document.getElementById("overlay");
-
-        function openSidebar() {
-            sidebar.classList.add("active");
-            overlay.classList.add("active");
-        }
-
-        function closeSidebar() {
-            sidebar.classList.remove("active");
-            overlay.classList.remove("active");
-        }
-    </script>
 </body>
 </html>
